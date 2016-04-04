@@ -3,7 +3,7 @@
 Plugin Name: Material Design Side Nav
 Plugin URI:  http://advisantgroup.com
 Description: Add a material design SideNav/drawer-style menu to your WordPress site
-Version:     1.1.1
+Version:     1.0.0
 Author:      Justin Maurer
 Author URI:  http://advisantgroup.com
 License:     GPL2
@@ -22,7 +22,7 @@ if (file_exists(__DIR__ . '/vendor/CMB2/init.php')) {
 }
 require 'plugin_update_check.php';
 $MyUpdateChecker = new PluginUpdateChecker_2_0 (
-    'https://kernl.us/api/v1/updates/[[PLUGIN ID GOES HERE]]/',
+    'https://kernl.us/api/v1/updates/5702d59be6df02941647599a/',
     __FILE__,
     'material-side-nav',
     1
