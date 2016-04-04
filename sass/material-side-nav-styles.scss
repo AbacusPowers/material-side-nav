@@ -1,0 +1,15 @@
+nav .button-collapse {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  background: #613f87;
+  z-index: 200;
+  //height: 50px;
+  //width: 50px;
+  border-radius: 0 10px 10px 0;
+
+  img {
+    vertical-align: middle;
+    margin: 8px;
+  }
+}

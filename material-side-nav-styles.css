@@ -1,0 +1,12 @@
+nav .button-collapse {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  background: #613f87;
+  z-index: 200;
+  border-radius: 0 10px 10px 0; }
+  nav .button-collapse img {
+    vertical-align: middle;
+    margin: 8px; }
+
+/*# sourceMappingURL=material-side-nav-styles.css.map */

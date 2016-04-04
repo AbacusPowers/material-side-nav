@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,oBAAqB;EACnB,QAAQ,EAAE,KAAK;EACf,IAAI,EAAE,CAAC;EACP,GAAG,EAAE,GAAG;EACR,UAAU,EAAE,OAAO;EACnB,OAAO,EAAE,GAAG;EAGZ,aAAa,EAAE,aAAa;EAE5B,wBAAI;IACF,cAAc,EAAE,MAAM;IACtB,MAAM,EAAE,GAAG",
+"sources": ["sass/material-side-nav-styles.scss"],
+"names": [],
+"file": "material-side-nav-styles.css"
+}
