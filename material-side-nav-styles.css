@@ -1,12 +1,32 @@
-nav .button-collapse {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  background: #613f87;
-  z-index: 200;
-  border-radius: 0 10px 10px 0; }
-  nav .button-collapse img {
-    vertical-align: middle;
-    margin: 8px; }
+nav.side-nav {
+  overflow-x: visible;
+  overflow-y: visible;
+  z-index: 9000; }
+  nav.side-nav ul {
+    margin: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; }
+    .logged-in nav.side-nav ul {
+      margin-top: 28px; }
+    nav.side-nav ul li {
+      border-bottom: 1px solid; }
+      nav.side-nav ul li:last-of-type {
+        border-bottom: 0; }
+  nav.side-nav .button-collapse {
+    position: absolute;
+    height: auto;
+    line-height: initial;
+    width: 60px;
+    right: -60px;
+    top: 50%;
+    z-index: 1000;
+    padding: 0;
+    border-radius: 0 10px 10px 0;
+    -webkit-box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, 0.16), 5px 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, 0.16), 5px 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, 0.16), 5px 2px 10px 0 rgba(0, 0, 0, 0.12); }
+    nav.side-nav .button-collapse img {
+      vertical-align: middle;
+      margin: 8px 8px 8px 12px; }
 
 /*# sourceMappingURL=material-side-nav-styles.css.map */

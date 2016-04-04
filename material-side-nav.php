@@ -107,15 +107,17 @@ function materialSideNavContent()
     $navItems = materialSideNavGetOption('material_side_nav_side_nav_item');
     $logoSrc = materialSideNavGetOption('material_side_nav_trigger_image');
     $primaryColor = materialSideNavGetOption('material_side_nav_side_nav_background_colorpicker');
+    $textColor = materialSideNavGetOption('material_side_nav_side_nav_text_colorpicker');
+    $topMargin = materialSideNavGetOption('material_side_nav_side_nav_top_margin');
 //    var_dump('<pre>',$navItems,'</pre>');
 ?>
-    <nav>
-        <ul id="slide-out" class="side-nav" style="background-color: <?= $primaryColor; ?>">
+    <nav id="slide-out" class="side-nav" style="background-color: <?= $primaryColor; ?>">
+        <ul style="max-height: 100vh;">
             <?php
                 foreach ($navItems as $item) {
                     $label = $item['side_nav_label'];
                     $link = materialSideNavGetURL($item);
-                    echo '<li><a href="' . $link . '">' . $label . '</a></li>';
+                    echo '<li style="border-color: '.$textColor.';"><a href="' . $link . '" style="color:' . $textColor . '">' . $label . '</a></li>';
                 }
             ?>
 

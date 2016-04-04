@@ -134,7 +134,20 @@ class MaterialSideNavAdmin
             'desc' => __('Select your primary color', 'material_side_nav'),
             'id' => $prefix . 'side_nav_background_colorpicker',
             'type' => 'colorpicker',
-            'default' => '#904199'
+            'default' => '#FFFFFF'
+        ));
+        $cmb->add_field(array(
+            'name' => __('Text Color', 'material_side_nav'),
+            'desc' => __('Select your text color', 'material_side_nav'),
+            'id' => $prefix . 'side_nav_text_colorpicker',
+            'type' => 'colorpicker',
+            'default' => '#666666'
+        ));
+        $cmb->add_field(array(
+            'name' => __('Top Margin', 'material_side_nav'),
+            'desc' => __('In px, how much to compensate for fixed headers, etc.', 'material_side_nav'),
+            'id' => $prefix . 'side_nav_top_margin',
+            'type' => 'text_small'
         ));
         $cmb->add_field( array(
             'name'    => 'Logo for drawer',
