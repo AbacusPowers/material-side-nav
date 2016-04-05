@@ -3,7 +3,7 @@
 Plugin Name: Material Design Side Nav
 Plugin URI:  http://advisantgroup.com
 Description: Add a material design SideNav/drawer-style menu to your WordPress site
-Version:     1.2.0
+Version:     1.2.2
 Author:      Justin Maurer
 Author URI:  http://advisantgroup.com
 License:     GPL2
@@ -109,22 +109,24 @@ function materialSideNavContent()
     $primaryColor = materialSideNavGetOption('material_side_nav_side_nav_background_colorpicker');
     $textColor = materialSideNavGetOption('material_side_nav_side_nav_text_colorpicker');
     $topMargin = materialSideNavGetOption('material_side_nav_side_nav_top_margin');
-//    var_dump('<pre>',$navItems,'</pre>');
-?>
-    <nav id="slide-out" class="side-nav" style="background-color: <?= $primaryColor; ?>">
-        <ul style="max-height: 100vh;">
-            <?php
+    $loggedIn = is_user_logged_in();
+    if ($loggedIn === true) {
+        ?>
+        <nav id="slide-out" class="side-nav" style="background-color: <?= $primaryColor; ?>">
+            <ul style="max-height: 100vh;">
+                <?php
                 foreach ($navItems as $item) {
                     $label = $item['side_nav_label'];
                     $link = materialSideNavGetURL($item);
-                    echo '<li style="border-color: '.$textColor.';"><a href="' . $link . '" style="color:' . $textColor . '">' . $label . '</a></li>';
+                    echo '<li style="border-color: ' . $textColor . ';"><a href="' . $link . '" style="color:' . $textColor . '">' . $label . '</a></li>';
                 }
-            ?>
+                ?>
 
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse" style="background-color: <?= $primaryColor; ?>"><img src="<?= $logoSrc; ?>" id="material-side-nav-logo" width="40"></a>
-    </nav>
-    <?php
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse" style="background-color: <?= $primaryColor; ?>"><img src="<?= $logoSrc; ?>" id="material-side-nav-logo" width="40"></a>
+        </nav>
+        <?php
+    }
 }
 
 add_action('wp_footer', 'materialSideNavContent');
