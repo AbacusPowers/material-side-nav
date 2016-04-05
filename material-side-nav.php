@@ -3,7 +3,7 @@
 Plugin Name: Material Design Side Nav
 Plugin URI:  http://advisantgroup.com
 Description: Add a material design SideNav/drawer-style menu to your WordPress site
-Version:     1.1.5
+Version:     1.2.0
 Author:      Justin Maurer
 Author URI:  http://advisantgroup.com
 License:     GPL2
@@ -62,15 +62,15 @@ function materialSideNavNewScripts()
     wp_register_style('material-design-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', '', null);
 
     wp_register_style('material-side-nav-materialize-css', plugin_dir_url(__FILE__) . '/vendor/materialize-src/materialize.css',
-        'material-design-icons', null);
+        array('material-design-icons'), null);
 
-    wp_register_script('material-side-nav-materialize-js', plugin_dir_url(__FILE__) . '/vendor/materialize-src/js/bin/materialize.min.js',
-        'jquery', true);
+    wp_register_script('materialize-js', plugin_dir_url(__FILE__) . '/vendor/materialize-src/js/bin/materialize.min.js',
+        array('jquery'), true);
 
     wp_register_style('material-side-nav-styles', plugin_dir_url(__FILE__) . 'material-side-nav-styles.css',
-        'material-design-icons', null);
+        array('material-design-icons'), null);
 
-    wp_register_script('material-side-nav-js', plugin_dir_url(__FILE__) . 'js/material-side-nav.js', 'jquery', null, true);
+    wp_register_script('material-side-nav-js', plugin_dir_url(__FILE__) . 'js/material-side-nav.js', array('jquery'), null, true);
 
     /**
      * Enqueue all dependencies
